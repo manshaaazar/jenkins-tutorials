@@ -4,6 +4,7 @@ job('NodeJS Example'){
             node / gitConfigName('DSL User')
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
         }
+    }
     triggers{
         scm('H/5 * * * *')
     }
