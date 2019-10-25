@@ -5,6 +5,7 @@ job('NodeJs Docker Example'){
         node / gitConfigEmail('manshaehsan000@gmail.com')
 
     }
+   }
     triggers {
         scm('H/5 * * * *')
     }
