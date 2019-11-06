@@ -42,11 +42,4 @@ pipeline{
         }
 
     }
-    post{
-        always{
-            failure{
-                mail to: manshaehsan000@gmail.com, subject: "pipeline complete syntax but failed to get it completly"
-            }
-        }
-    }
 }
