@@ -37,7 +37,7 @@ pipeline{
         }
         stage('Environment Variables List'){
             steps{
-                echo 'printenv'
+                sh'printenv'
             }
         }
 
