@@ -77,7 +77,14 @@ pipeline{
                 echo "Hello, ${PERSON}, nice to meet you."
             }
         }
+        
     }
-
+    post{
+        success{
+            echo "Successfully executed"
+        }
+        failure{
+            echo "Failed to execte Successfully"
+        }
     }
 
