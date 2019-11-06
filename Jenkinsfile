@@ -22,7 +22,7 @@ pipeline{
             }
         }
         stage('Deploy'){
-            environemnt{
+            environment{
                 deploy="Deploy Environment"
             }
             steps{
