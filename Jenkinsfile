@@ -1,26 +1,15 @@
 pipeline {
-  agent {
-    docker {
-      image 'docker'
-      args '-v $HOME/var/run/docker.sock:$HOME/var/run/docker.sock'
+  agent any
+  stages {
+    stage('Clone Repo') {
+      steps {
+        git(url: 'https://github.com/manshaaazar/node-deployment.git', branch: 'master', credentialsId: 'github')
+      }
     }
 
-  }
-  stages {
-    stage('Docker Version') {
-      parallel {
-        stage('Docker Version') {
-          steps {
-            sh 'docker --version'
-          }
-        }
-
-        stage('Dokcer Version') {
-          steps {
-            sh 'whoami'
-          }
-        }
-
+    stage('Installing Dep') {
+      steps {
+        sh 'npm install'
       }
     }
 
