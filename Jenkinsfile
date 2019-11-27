@@ -7,9 +7,12 @@ pipeline {
       }
     }
 
-    stage('Installing Dep') {
+    stage('') {
       steps {
-        sh 'npm install'
+        nodejs('nodejs') {
+          sh 'npm install'
+        }
+
       }
     }
 
